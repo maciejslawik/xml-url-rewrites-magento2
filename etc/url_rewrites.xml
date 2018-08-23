@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!--
+@author Maciej Sławik <maciekslawik@gmail.com>
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:MSlwk_XmlUrlRewrites:etc/url_rewrites.xsd">
+    <rewrites>
+        <rewrite path="a/b/c" target="/" />
+        <rewrite path="test" target="isthebest" />
+    </rewrites>
+</config>
