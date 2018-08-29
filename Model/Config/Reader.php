@@ -21,8 +21,10 @@ use Magento\Framework\Config\ValidationStateInterface;
 class Reader extends Filesystem
 {
     const XML_FILE_NAME = 'url_rewrites.xml';
+    const ID_ATTRIBUTES = ['/config/rewrites/rewrite' => 'target'];
 
     /**
+     * Reader constructor.
      * @param FileResolverInterface $fileResolver
      * @param Converter $converter
      * @param SchemaLocator $schemaLocator
@@ -42,7 +44,7 @@ class Reader extends Filesystem
             $schemaLocator,
             $validationState,
             $fileName,
-            $this->_idAttributes
+            self::ID_ATTRIBUTES
         );
     }
 }

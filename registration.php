@@ -8,6 +8,6 @@
 
 \Magento\Framework\Component\ComponentRegistrar::register(
     \Magento\Framework\Component\ComponentRegistrar::MODULE,
-    'MSlwk_RepositorySearchResultBuilder',
+    'MSlwk_XmlUrlRewrites',
     __DIR__
 );

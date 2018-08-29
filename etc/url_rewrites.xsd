@@ -6,28 +6,22 @@
     <xs:element name="config">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="url_rewrites">
+                <xs:element name="rewrites">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="rewrites">
-                                <xs:complexType>
-                                    <xs:sequence>
-                                        <xs:element minOccurs="0" maxOccurs="unbounded" name="rewrite" type="rewrite" />
-                                    </xs:sequence>
-                                </xs:complexType>
-
-                                <xs:unique name="uniqueRewritePath">
-                                    <xs:annotation>
-                                        <xs:documentation>
-                                            URL rewrite path must be unique
-                                        </xs:documentation>
-                                    </xs:annotation>
-                                    <xs:selector xpath=".//*"/>
-                                    <xs:field xpath="@path"/>
-                                </xs:unique>
-                            </xs:element>
+                            <xs:element minOccurs="0" maxOccurs="unbounded" name="rewrite" type="rewrite" />
                         </xs:sequence>
                     </xs:complexType>
+
+                    <xs:unique name="uniqueRewritePath">
+                        <xs:annotation>
+                            <xs:documentation>
+                                URL rewrite path must be unique
+                            </xs:documentation>
+                        </xs:annotation>
+                        <xs:selector xpath="rewrite"/>
+                        <xs:field xpath="@path"/>
+                    </xs:unique>
                 </xs:element>
             </xs:sequence>
         </xs:complexType>
@@ -40,7 +34,7 @@
             </xs:documentation>
         </xs:annotation>
 
-        <xs:attribute name="parth" type="xs:string" use="required" />
+        <xs:attribute name="path" type="xs:string" use="required" />
         <xs:attribute name="target" type="xs:string" use="required" />
     </xs:complexType>
 </xs:schema>

@@ -10,6 +10,9 @@ declare(strict_types=1);
 
 namespace MSlwk\XmlUrlRewrites\Model\Config;
 
+use DOMDocument;
+use DOMNode;
+use DOMXPath;
 use Magento\Framework\Config\ConverterInterface;
 
 /**
@@ -19,13 +22,20 @@ use Magento\Framework\Config\ConverterInterface;
 class Converter implements ConverterInterface
 {
     /**
-     * Convert config
-     *
-     * @param \DOMDocument $source
+     * @param DOMDocument $source
      * @return array
      */
     public function convert($source)
     {
-        // TODO: Implement convert() method.
+        $xpath = new DOMXPath($source);
+        $rewrites = [];
+        /** @var $rewriteNode DOMNode */
+        foreach ($xpath->query('/config/rewrites/rewrite') as $rewriteNode) {
+            $rewriteAttributes = $rewriteNode->attributes;
+            $pathAttribute = $rewriteAttributes->getNamedItem('path');
+            $targetAttribute = $rewriteAttributes->getNamedItem('target');
+            $rewrites[$pathAttribute->nodeValue] = $targetAttribute->nodeValue;
+        }
+        return $rewrites;
     }
 }
