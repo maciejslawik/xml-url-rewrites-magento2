@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!--
+@author Maciej Sławik <maciekslawik@gmail.com>
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Cache/etc/cache.xsd">
+
+    <type name="xml_url_rewrites" translate="label,description" instance="MSlwk\XmlUrlRewrites\Model\Cache\Rewrites">
+        <label>XML URL Rewrites</label>
+        <description>URL Rewrites defined in XML files</description>
+    </type>
+
+</config>
