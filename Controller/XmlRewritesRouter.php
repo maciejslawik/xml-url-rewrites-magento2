@@ -11,6 +11,7 @@ declare(strict_types=1);
 namespace MSlwk\XmlUrlRewrites\Controller;
 
 use Magento\Framework\App\Action\Forward;
+use Magento\Framework\App\ActionFactory;
 use Magento\Framework\App\ActionInterface;
 use Magento\Framework\App\RequestInterface;
 use Magento\Framework\App\RouterInterface;
@@ -24,7 +25,7 @@ use MSlwk\XmlUrlRewrites\Api\RewritesProviderInterface;
 class XmlRewritesRouter implements RouterInterface
 {
     /**
-     * @var \Magento\Framework\App\ActionFactory
+     * @var ActionFactory
      */
     private $actionFactory;
 
@@ -35,11 +36,11 @@ class XmlRewritesRouter implements RouterInterface
 
     /**
      * XmlRewritesRouter constructor.
-     * @param \Magento\Framework\App\ActionFactory $actionFactory
+     * @param ActionFactory $actionFactory
      * @param RewritesProviderInterface $rewritesProvider
      */
     public function __construct(
-        \Magento\Framework\App\ActionFactory $actionFactory,
+        ActionFactory $actionFactory,
         RewritesProviderInterface $rewritesProvider
     ) {
         $this->actionFactory = $actionFactory;

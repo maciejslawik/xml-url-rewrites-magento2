@@ -5,6 +5,6 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:MSlwk_XmlUrlRewrites:etc/url_rewrites.xsd">
     <rewrites>
         <rewrite path="a/b/c" target="catalog/category/view" />
-        <rewrite path="test" target="catalog/category/view" />
+        <rewrite path="test" target="catalog/product/view" />
     </rewrites>
 </config>
