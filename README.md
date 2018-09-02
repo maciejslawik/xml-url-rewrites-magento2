@@ -30,3 +30,33 @@ following commands:
  php bin/magento module:enable MSlwk_XmlUrlRewrites
  php bin/magento setup:upgrade
  ```
+ 
+## Usage ##
+
+To create new rewrites add ```etc/url_rewrites.xml``` file to your module.
+
+Example:
+
+```
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:MSlwk_XmlUrlRewrites:etc/url_rewrites.xsd">
+    <rewrites>
+        <rewrite path="a/b/c" target="catalog/category/view" />
+        <rewrite path="test" target="catalog/product/view" />
+    </rewrites>
+</config>
+```
+
+## Versioning
+
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/maciejslawik/xml-url-rewrites-magento2/tags). 
+
+## Authors
+
+* **Maciej Sławik** - https://github.com/maciejslawik
+
+See also the list of [contributors](https://github.com/maciejslawik/xml-url-rewrites-magento2/contributors) who participated in this project.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
