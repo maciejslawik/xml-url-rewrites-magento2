@@ -2,6 +2,7 @@
 [![License](https://poser.pugx.org/mslwk/module-xml-url-rewrites/license)](https://packagist.org/packages/mslwk/module-xml-url-rewrites)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/maciejslawik/xml-url-rewrites-magento2/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/maciejslawik/xml-url-rewrites-magento2/?branch=master)
 [![Build Status](https://scrutinizer-ci.com/g/maciejslawik/xml-url-rewrites-magento2/badges/build.png?b=master)](https://scrutinizer-ci.com/g/maciejslawik/xml-url-rewrites-magento2/build-status/master)
+[![Total Downloads](https://poser.pugx.org/mslwk/module-xml-url-rewrites/downloads)](https://packagist.org/packages/mslwk/module-xml-url-rewrites)
 
 # Magento 2 XML URL Rewrites module #
 
